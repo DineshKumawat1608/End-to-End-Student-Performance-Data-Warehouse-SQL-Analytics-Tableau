@@ -114,7 +114,7 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 - **`load_<layer>`**
 
-  - `<layer>`: Represents the Medallion layer being loaded.
-  - Examples:
-    - `load_bronze`
-    - `load_silver`
+ - `<layer>`: Represents the layer being loaded, such as `bronze`, `silver`, or `gold`.
+  - Example: 
+    - `load_bronze` → Stored procedure for loading data into the Bronze layer.
+    - `load_silver` → Stored procedure for loading data into the Silver layer.
