@@ -146,22 +146,32 @@ WHERE rnk = 1;
 		TRUNCATE TABLE silver.students;
 		PRINT '>> Inserting Data Into: silver.students';
 		;WITH cleaned_students AS (
-			SELECT
+			SELECT 
 				Student_ID,
 				Full_Name,
 				Date_of_Birth,
 				Grade_Level,
-				COALESCE(
-					REPLACE(
+				CASE
+					WHEN Emergency_Contact_clean LIKE '%x%' THEN LEFT(Emergency_Contact_clean, CHARINDEX('x', Emergency_Contact_clean) - 1)
+					ELSE Emergency_Contact_clean
+				END AS Emergency_Contact_clean
+			FROM ( 
+				SELECT
+					Student_ID,
+					Full_Name,
+					Date_of_Birth,
+					Grade_Level,
+					COALESCE(
 						REPLACE(
 							REPLACE(
-								REPLACE(TRIM(Emergency_Contact), '(', ''),
-							')', ''),
-						'.', ''),
-					'-', ''),
-					'n/a'
-				) AS Emergency_Contact_clean -- Remove special characters and replace blank values with 'n/a'
-			FROM bronze.students
+								REPLACE(
+									REPLACE(TRIM(Emergency_Contact), '(', ''),
+								')', ''),
+							'.', ''),
+						'-', ''),
+						'n/a'
+					) AS Emergency_Contact_clean -- Remove special characters and replace blank values with 'n/a'
+				FROM bronze.students) t
 		)
 		INSERT INTO silver.students (
 			Student_ID,
@@ -175,7 +185,7 @@ WHERE rnk = 1;
 			LOWER(TRIM(Full_Name)) AS Full_Name,
 			Date_of_Birth,
 			Grade_Level,
-			CASE
+			CASE 
 				WHEN Emergency_Contact_clean LIKE '+1%' THEN Emergency_Contact_clean
 				WHEN Emergency_Contact_clean LIKE '+%' THEN '+1' + SUBSTRING(Emergency_Contact_clean, 2, LEN(Emergency_Contact_clean))
 				WHEN Emergency_Contact_clean LIKE '001%' THEN '+1' + SUBSTRING(Emergency_Contact_clean, 4, LEN(Emergency_Contact_clean))
