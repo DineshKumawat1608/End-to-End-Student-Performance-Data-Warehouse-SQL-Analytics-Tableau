@@ -73,7 +73,6 @@ Develop a modern SQL Server data warehouse to consolidate educational datasets i
 - **Data Source:** Student Performance & Attendance CSV datasets.
 - **Data Quality:** Clean inconsistent values, remove duplicates, standardize formats, and validate data.
 - **Integration:** Combine multiple educational datasets into a Star Schema.
-- **Scope:** Focus on the latest dataset only. Historical tracking is not required.
 - **Documentation:** Provide complete documentation for ETL, architecture, data model, and naming conventions.
 
 ---
@@ -105,7 +104,6 @@ Analyze student performance, attendance, homework completion, and teacher-parent
   - Analyze attendance behavior.
   - Evaluate homework completion patterns.
   - Explore subject-level academic performance.
-  - Understand communication trends between teachers and parents.
 
 ---
 
