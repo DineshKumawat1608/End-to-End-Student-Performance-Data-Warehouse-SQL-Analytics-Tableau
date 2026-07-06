@@ -113,35 +113,7 @@ Analyze student performance, attendance, homework completion, and teacher-parent
 
 Develop interactive Tableau dashboards that allow school administrators and educators to monitor academic performance, attendance behavior, and student engagement.
 
-### Key Highlights
 
-- Displays overall academic KPIs such as:
-  - Total Students
-  - Average Exam Score
-  - Average Homework Completion
-  - Attendance Records
-  - Homework Assignments
-  - Teacher-Parent Communications
-
-- Student insights include:
-  - Performance by Grade
-  - Attendance Status Distribution
-  - Homework Completion Analysis
-  - Student Segmentation based on Academic Performance
-  - Student Segmentation based on Homework Consistency
-
-- Subject insights include:
-  - Average Exam Score by Subject
-  - Attendance Distribution by Subject
-  - Homework Performance by Subject
-
-- Interactive filters allow users to explore the data by:
-  - Student
-  - Grade
-  - Subject
-  - Attendance Status
-  - Assignment Status
-  - Guardian Signature
 
 These dashboards transform raw educational data into actionable insights to support better academic planning and student success.
 
@@ -150,74 +122,76 @@ These dashboards transform raw educational data into actionable insights to supp
 # 📂 Repository Structure
 
 ```text
-1. data_warehouse/
+SQL_P1_Student_Performance_and_Attendance
 │
-├── datasets/                                  # Raw CSV datasets
+├── 1. data_warehouse
+│   │
+│   ├── 1. datasets
+│   │   └── Student Performance and Attendance Dataset
+│   │       ├── attendance.csv
+│   │       ├── homework.csv
+│   │       ├── performance.csv
+│   │       ├── students.csv
+│   │       └── teacher_parent_communication.csv
+│   │
+│   ├── 2. scripts
+│   │   ├── bronze
+│   │   │   ├── ddl_bronze.sql
+│   │   │   └── load_bronze.sql
+│   │   │
+│   │   ├── silver
+│   │   │   ├── ddl_silver.sql
+│   │   │   ├── load_silver.sql
+│   │   │
+│   │   └── gold
+│   │   |   └── ddl_gold.sql
+│   │   |
+|   |   └── init_database.sql
+│   │   
+│   ├── 3. tests
+│   │   ├── quality_checks_silver.sql
+│   │   └── quality_checks_gold.sql
+│   │
+│   └── 4. docs
+│       ├── data_architecture.png
+│       ├── data_catalog.md
+│       ├── data_flow.png
+│       ├── data_model.png
+│       └── naming_conventions.md
 │
-├── docs/
-│   ├── data_architecture.drawio
-│   ├── data_catalog.md
-│   ├── data_flow.drawio
-│   ├── data_models.drawio
-│   ├── etl.drawio
-│   └── naming_conventions.md
+├── 2. eda_&_advanced_analysis
+│   │
+│   ├── 1. datasets
+│   │   ├── dim_students.csv
+│   │   ├── dim_subjects.csv
+│   │   ├── fact_attendance.csv
+│   │   ├── fact_homework.csv
+│   │   ├── fact_performance.csv
+│   │   └── fact_teacher_parent_communication.csv
+│   │
+│   ├── 2. scripts
+│   │   ├── 00_init_database.sql
+│   │   ├── 01_database_exploration.sql
+│   │   ├── 02_dimensions_exploration.sql
+│   │   ├── 03_date_range_exploration.sql
+│   │   ├── 04_measures_exploration.sql
+│   │   ├── 05_magnitude_analysis.sql
+│   │   ├── 06_ranking_analysis.sql
+│   │   ├── 07_change_over_time_analysis.sql
+│   │   ├── 08_data_segmentation.sql
+│   │   ├── 09_part_to_whole_analysis.sql
+│   │   └── 10_cumulative_analysis.sql
+│   │
+│   └── 3. docs
+│       └── Project_Roadmap.pdf
 │
-├── scripts/
-│   ├── bronze/
-│   ├── silver/
-│   └── gold/
+├── 3. dashboard
+│   ├── Student_Performance_Dashboard.twb
+│   ├── dashboard.pdf
+│   └── dashboard.png
 │
-├── tests/
-│
--------------------------------------------------------------------------------------------------------
-
-2. analysis/
-│
-├── datasets/
-│   ├── dim_students.csv
-│   ├── dim_subjects.csv
-│   ├── fact_attendance.csv
-│   ├── fact_homework.csv
-│   ├── fact_performance.csv
-│   └── fact_teacher_parent_communication.csv
-│
-├── sql_scripts/
-│   ├── 00_create_analytics_database.sql
-│   ├── 01_database_exploration.sql
-│   ├── 02_dimensions_exploration.sql
-│   ├── 03_date_range_exploration.sql
-│   ├── 04_measures_exploration.sql
-│   ├── 05_magnitude_analysis.sql
-│   ├── 06_ranking_analysis.sql
-│   ├── 07_change_over_time_analysis.sql
-│   ├── 08_data_segmentation.sql
-│   ├── 09_part_to_whole_analysis.sql
-│   └── 10_cumulative_analysis.sql
-│
-├── docs/
-│   └── analysis_roadmap.png
-│
--------------------------------------------------------------------------------------------------------
-
-3. dashboard/
-│
-├── datasets/
-│   ├── dim_students.csv
-│   ├── dim_subjects.csv
-│   ├── fact_attendance.csv
-│   ├── fact_homework.csv
-│   ├── fact_performance.csv
-│   └── fact_teacher_parent_communication.csv
-│
-├── tableau/
-│   └── student_performance_dashboard.twb
-│
-├── docs/
-│   └── dashboard.pdf
-│
--------------------------------------------------------------------------------------------------------
-
-├── README.md
+├── LICENSE
+└── README.md
 ```
 
 ---
