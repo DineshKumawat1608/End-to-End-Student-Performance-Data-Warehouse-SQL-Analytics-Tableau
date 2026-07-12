@@ -133,27 +133,16 @@ Provides a high-level summary of academic performance through KPI cards and inte
 <img width="1250" height="800" alt="1  Executive Overview" src="https://github.com/user-attachments/assets/3222db2d-f542-4b8d-9731-c58011a075c3" />
 
 
-
 ### 📌 Student Analysis
 Supports deeper academic analysis through:
+<img width="1268" height="811" alt="3  Student Analysis" src="https://github.com/user-attachments/assets/a328c179-b5cd-4da8-94de-6f0d26f097c1" />
 
-- Highest performing students
-- Students requiring improvement
-- Attendance by subject
-- Homework completion vs. exam score
-- Average age vs. exam score
-- Teacher-parent communication analysis
 
 ### 📌 Student Details
 Provides a detailed student-level view including:
+<img width="1282" height="819" alt="5  Student Summary" src="https://github.com/user-attachments/assets/75999e16-4c71-4e92-aba9-d7082f5b3362" />
 
-- Student profile
-- Academic summary
-- Attendance summary
-- Parent communication
-- Student rank
-- Contact information
-- Dynamic filtering
+
 
 ### Dashboard Features
 
