@@ -1,62 +1,70 @@
-# End-to-End Student Performance & Attendance Data Warehouse & Analytics Project
+# 🎓 End-to-End Student Performance & Attendance Data Warehouse & Analytics Project
 
-This repository showcases an **end-to-end data analytics project** where raw educational data is transformed into meaningful academic insights using a modern data warehouse approach.
+This repository showcases an **end-to-end Data Engineering and Analytics project** that transforms raw educational data into meaningful academic insights using a modern data warehouse approach.
 
-The project covers the complete analytics lifecycle — from **building a data warehouse**, performing **ETL and data modeling**, to conducting **SQL-based exploratory and advanced analysis**, and finally creating **interactive Tableau dashboards**.
+The project covers the complete analytics lifecycle—from **building a SQL Server data warehouse**, performing **ETL and data modeling**, to conducting **SQL-based exploratory and advanced analysis**, and finally creating **interactive Tableau dashboards**.
 
-Key analysis and dashboards focus on:
+The analysis focuses on:
 
-- **Student academic performance**
-- **Attendance patterns and trends**
-- **Homework completion analysis**
-- **Teacher-parent communication insights**
+- Student academic performance
+- Attendance patterns and trends
+- Homework completion analysis
+- Teacher-parent communication insights
 
-This project is created as a **portfolio project** to demonstrate practical, industry-relevant skills in data engineering, SQL analytics, data visualization, and business intelligence.
+This project demonstrates practical, industry-oriented skills in **Data Engineering, SQL Analytics, Data Warehousing, Data Visualization, and Business Intelligence**.
 
 ---
 
 # 🏗️ Data Architecture
 
-The data architecture for this project follows the **Medallion Architecture** using **Bronze**, **Silver**, and **Gold** layers.
+The project follows the **Medallion Architecture**, organizing data into **Bronze**, **Silver**, and **Gold** layers.
 
-1. **Bronze Layer**
-   - Stores raw student datasets exactly as received from CSV files.
-   - No transformations are applied.
+### 🥉 Bronze Layer
+- Stores raw student datasets exactly as received from CSV files.
+- No transformations are applied.
 
-2. **Silver Layer**
-   - Performs data cleaning, standardization, normalization, deduplication, and validation.
-   - Produces clean and consistent datasets suitable for analytics.
+### 🥈 Silver Layer
+- Performs data cleaning, standardization, validation, and deduplication.
+- Produces clean and consistent datasets for analytics.
 
-3. **Gold Layer**
-   - Creates business-ready dimension and fact views using a Star Schema.
-   - Serves as the analytical layer for SQL analysis and Tableau dashboards.
+### 🥇 Gold Layer
+- Creates business-ready dimension and fact views using a Star Schema.
+- Serves as the analytical layer for SQL analysis and Tableau dashboards.
 
 ---
 
 # 📖 Project Overview
 
-This project involves:
+This project includes:
 
-1. **Data Architecture**
-   - Designing a modern data warehouse using the Medallion Architecture.
+### 1. Data Architecture
+- Designing a modern data warehouse using the Medallion Architecture.
 
-2. **ETL Pipelines**
-   - Loading raw educational datasets into SQL Server and transforming them into analytical models.
+### 2. ETL Pipelines
+- Loading raw educational datasets into SQL Server and transforming them into analytical models.
 
-3. **Data Cleaning**
-   - Cleaning inconsistent values, handling missing values, standardizing formats, removing duplicates, and validating data quality.
+### 3. Data Cleaning
+- Cleaning inconsistent values, handling missing data, standardizing formats, removing duplicates, and validating data quality.
 
-4. **Data Modeling**
-   - Developing a Star Schema consisting of dimension and fact views optimized for analytical queries.
+### 4. Data Modeling
+- Developing a Star Schema consisting of dimension and fact views optimized for analytical queries.
 
-5. **Exploratory Data Analysis (EDA)**
-   - Performing database exploration, dimension analysis, date analysis, measures exploration, ranking, and magnitude analysis.
+### 5. Exploratory Data Analysis (EDA)
+- Database exploration
+- Dimension exploration
+- Date range exploration
+- Measures exploration
+- Magnitude analysis
+- Ranking analysis
 
-6. **Advanced SQL Analytics**
-   - Conducting trend analysis, segmentation, cumulative analysis, and part-to-whole analysis using advanced SQL window functions.
+### 6. Advanced SQL Analytics
+- Change-over-time analysis
+- Cumulative analysis
+- Data segmentation
+- Part-to-whole analysis
 
-7. **Dashboard Development**
-   - Building interactive Tableau dashboards that provide meaningful educational insights for school management.
+### 7. Dashboard Development
+- Building interactive Tableau dashboards that provide actionable insights for school administrators and educators.
 
 ---
 
@@ -70,10 +78,10 @@ Develop a modern SQL Server data warehouse to consolidate educational datasets i
 
 ### Specifications
 
-- **Data Source:** Student Performance & Attendance CSV datasets.
-- **Data Quality:** Clean inconsistent values, remove duplicates, standardize formats, and validate data.
-- **Integration:** Combine multiple educational datasets into a Star Schema.
-- **Documentation:** Provide complete documentation for ETL, architecture, data model, and naming conventions.
+- **Data Source:** Student Performance & Attendance CSV datasets
+- **Data Quality:** Clean inconsistent values, remove duplicates, standardize formats, and validate data
+- **Integration:** Combine multiple educational datasets into a Star Schema
+- **Documentation:** Provide documentation for ETL, architecture, data model, and naming conventions
 
 ---
 
@@ -85,37 +93,80 @@ Analyze student performance, attendance, homework completion, and teacher-parent
 
 ### Specifications
 
-- **Exploratory Data Analysis (EDA):**
-  - Database exploration
-  - Dimension exploration
-  - Date range exploration
-  - Measures exploration
-  - Magnitude analysis
-  - Ranking analysis
+#### Exploratory Data Analysis (EDA)
 
-- **Advanced Analytics**
-  - Change-over-time analysis
-  - Cumulative analysis
-  - Data segmentation
-  - Part-to-whole analysis
+- Database exploration
+- Dimension exploration
+- Date range exploration
+- Measures exploration
+- Magnitude analysis
+- Ranking analysis
 
-- **Business Insights**
-  - Identify high and low-performing students.
-  - Analyze attendance behavior.
-  - Evaluate homework completion patterns.
-  - Explore subject-level academic performance.
+#### Advanced Analytics
+
+- Change-over-time analysis
+- Cumulative analysis
+- Data segmentation
+- Part-to-whole analysis
+
+#### Business Insights
+
+- Identify high and low-performing students
+- Analyze attendance behavior
+- Evaluate homework completion patterns
+- Explore subject-level academic performance
+- Monitor teacher-parent communication
 
 ---
 
-## Student Performance Dashboard
+# 📊 Student Performance Dashboard
 
 ### Objective
 
-Develop interactive Tableau dashboards that allow school administrators and educators to monitor academic performance, attendance behavior, and student engagement.
+Develop interactive Tableau dashboards that help school administrators and educators monitor academic performance, attendance, homework completion, and student engagement.
 
+The solution consists of **three interactive dashboards** designed for different levels of academic analysis.
 
+### 📌 Executive Overview
+Provides a high-level summary of academic performance through KPI cards and interactive visualizations, including:
 
-These dashboards transform raw educational data into actionable insights to support better academic planning and student success.
+- Student and subject overview
+- Average exam score, attendance, and homework completion
+- Attendance and homework status distribution
+- Subject-wise and grade-wise performance
+- Student demographics
+- Monthly academic trends
+
+### 📌 Student Analysis
+Supports deeper academic analysis through:
+
+- Highest performing students
+- Students requiring improvement
+- Attendance by subject
+- Homework completion vs. exam score
+- Average age vs. exam score
+- Teacher-parent communication analysis
+
+### 📌 Student Details
+Provides a detailed student-level view including:
+
+- Student profile
+- Academic summary
+- Attendance summary
+- Parent communication
+- Student rank
+- Contact information
+- Dynamic filtering
+
+### Dashboard Features
+
+- Interactive dashboard navigation
+- Expandable and collapsible filter panel
+- Cross-filtering across visualizations
+- Dashboard usage guide
+- Clean and responsive layout
+
+These dashboards transform educational data into actionable insights that support informed academic decision-making.
 
 ---
 
@@ -186,7 +237,7 @@ SQL_P1_Student_Performance_and_Attendance
 │       └── Project_Roadmap.pdf
 │
 ├── 3. dashboard
-│   ├── Student_Performance_Dashboard.twb
+│   ├── Student_Performance_Dashboard.twbx
 │   └── dashboard.images
 │
 ├── LICENSE
@@ -202,6 +253,19 @@ Hi there! I'm **Dinesh Kumawat**.
 I'm a Data Analyst passionate about transforming raw data into meaningful insights using **SQL, Python, Excel, Power BI, Tableau, and Data Engineering concepts**. I enjoy building end-to-end analytics solutions—from designing data warehouses to creating interactive dashboards that solve real business problems.
 
 Let's connect!
+
+---
+
+# 🌟 About Me
+
+Hi there! I'm **Dinesh Kumawat**.
+
+I'm a Data Analyst passionate about transforming raw data into meaningful insights using **SQL, Python, Excel, Power BI, Tableau, and Data Engineering concepts**. I enjoy building end-to-end analytics solutions—from designing data warehouses to creating interactive dashboards that support better decision-making.
+
+Let's connect!
+
+**LinkedIn:**  
+https://www.linkedin.com/in/dineshkumawat1608/
 
 **LinkedIn:**  
 https://www.linkedin.com/in/dineshkumawat1608/
